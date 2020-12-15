@@ -32,7 +32,9 @@ public class RegistController {
     public String insert(User user, HttpServletRequest request, HttpServletResponse response){
         String username = user.getUsername();
         System.out.println(username);
+        //邮箱验证
         String regExp1 = "[\\w!#$%&'*+/=?^_`{|}~-]+(?:\\.[\\w!#$%&'*+/=?^_`{|}~-]+)*@(?:[\\w](?:[\\w-]*[\\w])?\\.)+[\\w](?:[\\w-]*[\\w])?";
+        //电话号码验证
         String regExp2 = "0?(13|14|15|17|18|19)[0-9]{9}";
         Pattern p1 = Pattern.compile(regExp1);
         Pattern p2 = Pattern.compile(regExp2);
